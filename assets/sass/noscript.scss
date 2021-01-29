@@ -6,31 +6,30 @@
 @import 'libs/html-grid';
 
 /*
-	Spectral by HTML5 UP
+	Solid State by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
 /* Banner */
 
-	body.is-preload {
-		#banner {
+	#banner {
+		body.is-preload & {
+			.logo {
+				@include vendor('transform', 'none');
+				opacity: 1;
+			}
+
 			h2 {
-				@include vendor('transform', 'none');
 				opacity: 1;
-
-				&:before, &:after {
-					width: 100%;
-				}
+				@include vendor('transform', 'none');
+				@include vendor('filter', 'none');
 			}
 
-			.more {
+			p {
+				opacity: 01;
 				@include vendor('transform', 'none');
-				opacity: 1;
-			}
-
-			&:after {
-				opacity: 0;
+				@include vendor('filter', 'none');
 			}
 		}
 	}
